@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <FlowPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Pane id="leftpane" prefHeight="501.0" prefWidth="600.0" style="-fx-background-color: #a63c06;">
+               <children>
+                  <Label layoutX="487.0" layoutY="479.0" text="Current Value: " textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label id="score" layoutX="570.0" layoutY="479.0" text="0" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Bold" size="13.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
+            <Pane prefHeight="501.0" prefWidth="300.0" style="-fx-background-color: #0D0D0D;">
+               <children>
+                  <Label alignment="TOP_CENTER" layoutY="21.0" prefHeight="22.0" prefWidth="298.0" text="3D PACKING SOLVER" textFill="#f2f2f2">
+                     <font>
+                        <Font name="Calibri Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <ComboBox id="type" layoutX="74.0" layoutY="83.0" prefWidth="150.0" promptText="BLOCK TYPE" style="-fx-background-color: #F2F2F2; -fx-font-family: 'Calibri'; -fx-font-size: 13; -fx-font-weight: bold;" value="Parcels">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <items>
+                        <FXCollections fx:factory="observableArrayList">
+                           <String fx:value="Pentominoes" />
+                           <String fx:value="Parcels" />
+                        </FXCollections>
+                     </items>
+                  </ComboBox>
+                  <Label layoutX="25.0" layoutY="176.0" text="VALUES" textFill="#f2f2f2">
+                     <font>
+                        <Font name="Calibri Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="24.0" layoutY="270.0" text="QUANTITY" textFill="#f2f2f2">
+                     <font>
+                        <Font name="Calibri Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <CheckBox id="unlimited" layoutX="203.0" layoutY="273.0" mnemonicParsing="false" text="Unlimited" textFill="#f2f2f2">
+                     <font>
+                        <Font name="Calibri Bold" size="12.0" />
+                     </font>
+                  </CheckBox>
+                  <Button id="sub" layoutX="32.0" layoutY="425.0" mnemonicParsing="false" style="-fx-background-color: rgba(0,0,0,0); -fx-border-color: white; -fx-border-radius: 20px;" stylesheets="@style.css" text="Find solution" textFill="#f2f2f2">
+                     <font>
+                        <Font name="Calibri Bold" size="15.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <ComboBox id="algo" layoutX="74.0" layoutY="121.0" prefWidth="150.0" promptText="ALGORITHM" style="-fx-background-color: #F2F2F2; -fx-font-family: 'Calibri'; -fx-font-size: 13; -fx-font-weight: bold;" value="Greedy Algorithm">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <items>
+                        <FXCollections fx:factory="observableArrayList">
+                           <String fx:value="Genetic Algorithm" />
+                           <String fx:value="Greedy Algorithm" />
+                           <String fx:value="Dancing Links" />
+                        </FXCollections>
+                     </items>
+                  </ComboBox>
+                  <TextField id="qa" alignment="CENTER" layoutX="26.0" layoutY="312.0" prefHeight="9.0" prefWidth="75.0" promptText="Quantity A" stylesheets="@style.css">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                     <font>
+                        <Font name="Calibri" size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField id="qc" alignment="CENTER" layoutX="201.0" layoutY="312.0" prefHeight="9.0" prefWidth="75.0" promptText="Quantity C" stylesheets="@style.css">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                     <font>
+                        <Font name="Calibri" size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField id="qb" alignment="CENTER" layoutX="113.0" layoutY="312.0" prefHeight="9.0" prefWidth="75.0" promptText="Quantity B" stylesheets="@style.css">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                     <font>
+                        <Font name="Calibri" size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField id="va" alignment="CENTER" layoutX="25.0" layoutY="215.0" prefHeight="9.0" prefWidth="75.0" promptText="Value A" stylesheets="@style.css">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                     <font>
+                        <Font name="Calibri" size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField id="vc" alignment="CENTER" layoutX="200.0" layoutY="215.0" prefHeight="9.0" prefWidth="75.0" promptText="Value C" stylesheets="@style.css">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                     <font>
+                        <Font name="Calibri" size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField id="vb" alignment="CENTER" layoutX="112.0" layoutY="215.0" prefHeight="9.0" prefWidth="75.0" promptText="Value B" stylesheets="@style.css">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                     <font>
+                        <Font name="Calibri" size="12.0" />
+                     </font>
+                  </TextField>
+                  <Button id="stop" layoutX="177.0" layoutY="425.0" mnemonicParsing="false" style="-fx-background-color: rgba(0,0,0,0); -fx-border-color: white; -fx-border-radius: 20px;" stylesheets="@style.css" text="Stop search" textFill="#f2f2f2">
+                     <font>
+                        <Font name="Calibri Bold" size="15.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </FlowPane>
+   </children>
+</VBox>

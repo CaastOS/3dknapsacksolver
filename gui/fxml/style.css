@@ -1,0 +1,17 @@
+#sub:hover,
+#stop:hover {
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.text-field {
+    -fx-background-color: rgba(255, 255, 255, 0.05);
+    -fx-border-style: solid none solid none;
+    -fx-border-color: white;
+    -fx-border-width: 0.5;
+    -fx-text-fill: white;
+}
+
+.text-field:focused {
+    -fx-scale-y: 1.1;
+}
